@@ -1,0 +1,88 @@
+ body{
+	 font-family: 'Raleway', sans-serif;
+  }
+  ul, ol {
+  list-style: none !important;
+}
+#accordion1 li.panel{
+    margin-bottom: 0px;
+}
+  .contentarea{
+    overflow-y: scroll !important;
+    height: 300px;
+    max-width: 100%;
+}
+  .horiz{
+	display: inline-block !important;
+  }
+  #search{
+    display:block;
+    text-align:center;
+}
+.form-rounded {
+border-radius: 1rem;
+}
+.has-search .form-control-feedback {
+    right: initial;
+    left: 0;
+    color: #ccc;
+}
+
+.has-search .form-control {
+    padding-right: 12px;
+    padding-left: 34px;
+}
+.subheading{
+	margin-left: -65px;
+}
+.sublink{
+	margin-top: -18px;
+    margin-left: -78px;
+    margin-bottom: -7px;
+}
+.navbar-default .navbar-nav > li > a > span {
+  border-bottom: 1px solid transparent;
+}
+a:hover, a:focus, a:active {
+    color: #999;
+    text-decoration: none;
+}
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #45cdd0;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+a:active::before {
+    background-color: #45cdd0;
+}
+a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+    #sidebar{
+		background-color: #b1d8eb;
+	}
+	#subheadmenu2{
+		padding-left: 0px;
+	}
+	.activelelm{
+		background-color: #60b6e0;
+		color: #fff;
+	}
+	#firstLink2{
+		padding-left:0px;
+		background-color:#e2f1f9
+	}
+	@media only screen and (max-width: 541px) {
+    #sidebar {
+        width: 100%;
+    }
+}
