@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,600,700" rel="stylesheet" />
-  <link rel="stylesheet" href="/mordordemo/public/css/customstyles.css">
+  <link rel="stylesheet" href="/public/css/customstyles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
@@ -14,7 +14,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.js"></script>	
 </head>
 <body ng-controller = "Dynamicloadcontroller">
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default" role="navigation" ng-init="load()">
 	<!-- Brand and toggle get grouped for better mobile display -->
       <div class="container-fluid">
 			<div class="navbar-header">
@@ -24,7 +24,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="/mordordemo/public/images/Mordortrans.gif" class="img-responsive"  alt="Mordor Intelligence"></a>
+				<a class="navbar-brand" href="#"><img src="/public/images/Mordortrans.gif" class="img-responsive"  alt="Mordor Intelligence"></a>
 			</div>
 		  <!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-mordor-navbar-collapse-1">
@@ -79,5 +79,5 @@
 	</nav>
 	<div id ="content"></div>
 </body>
-  <script type="text/javascript" src="/mordordemo/public/js/angularapp.js"></script>
+  <script type="text/javascript" src="/public/js/angularapp.js"></script>
 </html>

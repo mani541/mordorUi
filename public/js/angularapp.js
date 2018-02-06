@@ -22,7 +22,6 @@ var myApp = angular.module('Mordordemo', ['ui.bootstrap']);
 					click++;
 				}
 				$scope.$on('showsubnav', function(event,msgFromParent) {
-					console.log("got call"+msgFromParent.data);
 					if(msgFromParent.data == 'hidenav'){
 						 $scope.$apply(function () {
 							$scope.accordion2 = true;
@@ -40,7 +39,7 @@ var myApp = angular.module('Mordordemo', ['ui.bootstrap']);
 			},
 			replace:true,
 			transclude: true,
-		templateUrl: "/mordordemo/templates/data&analysis.html"
+		templateUrl: "/templates/data&analysis.html"
 	}  
 	}]);
 	myApp.directive('company', ['$window', function ($window) {
@@ -66,7 +65,6 @@ var myApp = angular.module('Mordordemo', ['ui.bootstrap']);
 					click++;
 				}
 				$scope.$on('showsubnav', function(event,msgFromParent) {
-					console.log("got call"+msgFromParent.data);
 					if(msgFromParent.data == 'hidenav'){
 						 $scope.$apply(function () {
 							$scope.accordion2 = true;
@@ -84,7 +82,7 @@ var myApp = angular.module('Mordordemo', ['ui.bootstrap']);
 			},
 			replace:true,
 			transclude: true,
-			templateUrl: '/mordordemo/templates/company.html'
+			templateUrl: '/templates/company.html'
 		}
     }]);
 	myApp.controller('Dynamicloadcontroller', ['$scope','$location','$timeout','$window','$rootScope','$compile','$filter',function($scope,$location,$timeout,$window,$rootScope,$compile,$filter) {
@@ -92,7 +90,7 @@ var myApp = angular.module('Mordordemo', ['ui.bootstrap']);
 		appWindow.bind('resize', function () {
 			setnavbar();
 		});
-		$window.onload = function () {
+		$scope.load = function () {
 			var template = $compile("<dataanalysis></dataanalysis>")($scope);
 			var contentdiv = document.getElementById('content');
 			var clr = angular.element(contentdiv)
